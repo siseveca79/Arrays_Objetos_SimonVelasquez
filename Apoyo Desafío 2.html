@@ -56,7 +56,9 @@
             // Desafío 3
             document.write("<h2>Consultas Médicas de Dental</h2>");
             dental.forEach(function (consulta) {
-                document.write(`<p>${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`);
+                document.write('<p style="padding: 5px;">');
+                document.write(`${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}`);
+                document.write('</p>');
             });
 
             // Desafío 4
@@ -65,32 +67,38 @@
                 .concat(dental.map(consulta => consulta.paciente));
             document.write("<h2>Listado Total de Pacientes</h2>");
             pacientes.forEach(function (paciente) {
-                document.write(`<p>${paciente}</p>`);
+                document.write('<p style="padding: 5px;">');
+                document.write(`${paciente}`);
+                document.write('</p>');
             });
 
             // Desafío 5
             var pacientesIsapreDental = dental.filter(consulta => consulta.prevision === 'ISAPRE');
             document.write("<h2>Pacientes de ISAPRE en Consultas Médicas de Dental</h2>");
             pacientesIsapreDental.forEach(function (consulta) {
-                document.write(`<p>${consulta.paciente} - ${consulta.prevision}</p>`);
+                document.write('<p style="padding: 5px;">');
+                document.write(`${consulta.paciente} - ${consulta.prevision}`);
+                document.write('</p>');
             });
 
             // Desafío 6
             var pacientesFonasaTraumatologia = traumatologia.filter(consulta => consulta.prevision === 'FONASA');
             document.write("<h2>Pacientes de FONASA en Consultas Médicas de Traumatología</h2>");
             pacientesFonasaTraumatologia.forEach(function (consulta) {
-                document.write(`<p>${consulta.paciente} - ${consulta.prevision}</p>`);
+                document.write('<p style="padding: 5px;">');
+                document.write(`${consulta.paciente} - ${consulta.prevision}`);
+                document.write('</p>');
             });
 
             // Material entregado
-            document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
-            document.write(`<p>Cantidad de atenciones para Traumatología: ${traumatologia.length}</p>`);
-            document.write(`<p>Cantidad de atenciones para Dental: ${dental.length}</p>`);
+            document.write(`<p><b>Cantidad de atenciones para Radiología: ${radiologia.length}</b></p>`);
+            document.write(`<p><b>Cantidad de atenciones para Traumatología: ${traumatologia.length}</b></p>`);
+            document.write(`<p><b>Cantidad de atenciones para Dental: ${dental.length}</b></p>`);
 
             // Material entregado
-            document.write(`<p>Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length - 1].paciente} - ${radiologia[radiologia.length - 1].prevision}.</p>`);
-            document.write(`<p>Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision}.</p>`);
-            document.write(`<p>Primera atencion: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[dental.length - 1].paciente} - ${dental[dental.length - 1].prevision}.</p>`);
+            document.write(`<p><b>Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[radiologia.length - 1].paciente} - ${radiologia[radiologia.length - 1].prevision}.</b></p>`);
+            document.write(`<p><b>Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision}.</b></p>`);
+            document.write(`<p><b>Primera atencion: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[dental.length - 1].paciente} - ${dental[dental.length - 1].prevision}.</b></p>`);
         </script>
     </div>
 </body>
